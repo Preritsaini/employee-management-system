@@ -1,0 +1,35 @@
+rules_version = '2';
+service firebase.storage {
+  match /b/{bucket}/o {
+    // Helper function to check if user is authenticated
+    function isAuthenticated() {
+      return request.auth != null;
+    }
+    
+    // Employee photos
+    match /employee_photos/{employeeId}.jpg {
+      // Allow read if user is authenticated
+      allow read: if isAuthenticated();
+      
+      // Allow write if user is authenticated
+      // (Users can upload their own, admins can upload for any employee)
+      allow write: if isAuthenticated();
+      
+      // Allow delete if user is authenticated
+      allow delete: if isAuthenticated();
+    }
+    
+    // Attendance photos
+    match /attendance_photos/{employeeId}/{type}/{timestamp}.jpg {
+      // Allow read if user is authenticated
+      allow read: if isAuthenticated();
+      
+      // Allow write if user is authenticated
+      allow write: if isAuthenticated();
+      
+      // Allow delete if user is authenticated
+      allow delete: if isAuthenticated();
+    }
+  }
+}
+

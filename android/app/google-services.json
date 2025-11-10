@@ -1,0 +1,29 @@
+{
+  "project_info": {
+    "project_number": "715182306359",
+    "project_id": "ams-ml-project",
+    "storage_bucket": "ams-ml-project.firebasestorage.app"
+  },
+  "client": [
+    {
+      "client_info": {
+        "mobilesdk_app_id": "1:715182306359:android:1c40dd6abde3bcb7c5fbb2",
+        "android_client_info": {
+          "package_name": "com.example.ams"
+        }
+      },
+      "oauth_client": [],
+      "api_key": [
+        {
+          "current_key": "AIzaSyD_r4dNbRcfPYd73MqInMvr2wibEFJo_GA"
+        }
+      ],
+      "services": {
+        "appinvite_service": {
+          "other_platform_oauth_client": []
+        }
+      }
+    }
+  ],
+  "configuration_version": "1"
+}
